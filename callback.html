@@ -1,0 +1,13 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><title>Conexión con Pinterest · SheetsyCo</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<style>body{font-family:Arial,sans-serif;max-width:720px;margin:60px auto;padding:0 20px;color:#222;text-align:center}code{display:block;background:#f2f2f2;padding:14px;border-radius:8px;font-size:15px;word-break:break-all;margin:18px 0}button{padding:12px 20px;font-size:16px;border-radius:8px;border:1px solid #888;background:#fff;cursor:pointer}</style></head><body>
+<h1>Pinterest conectado</h1>
+<p>Copia este código y pégaselo al bot de Telegram (o al comando que te haya pedido):</p>
+<code id="c">…</code>
+<button onclick="navigator.clipboard.writeText(document.getElementById('c').textContent)">Copiar código</button>
+<p id="e" style="color:#b00"></p>
+<script>
+const p=new URLSearchParams(location.search);
+document.getElementById('c').textContent=p.get('code')||'(no ha llegado ningún código)';
+if(p.get('error')) document.getElementById('e').textContent='Error: '+p.get('error')+' '+(p.get('error_description')||'');
+</script></body></html>
